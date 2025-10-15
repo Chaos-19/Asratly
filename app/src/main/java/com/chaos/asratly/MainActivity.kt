@@ -14,7 +14,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.chaos.asratly.ui.theme.MyComposeApplicationTheme
+import com.chaos.asratly.ui.navigation.AppNavGraph
+import dagger.hilt.android.AndroidEntryPoint
+import androidx.navigation.compose.rememberNavController
 
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,28 +29,10 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background) {
-                    Greeting("Android")
+                    val navController = rememberNavController()
+                    AppNavGraph(navController = navController)
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Column(
-        modifier = modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(text = "Hello $name!")
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MyComposeApplicationTheme {
-        Greeting("Android")
     }
 }
