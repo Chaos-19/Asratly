@@ -21,6 +21,27 @@ import com.chaos.asratly.ui.navigation.BottomNavigationBar
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun HomeScreen(navController: NavController) {
+    Scaffold(bottomBar = { BottomNavigationBar(navController as NavHostController) })
+     { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            Text(text = "Home Screen", style = MaterialTheme.typography.headlineLarge)
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(text = "This is the home page.", style = MaterialTheme.typography.bodyLarge)
+        }
+    }
+}
+
+/*
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun HomeScreen(navController: NavController) {
     Scaffold(
         bottomBar = { BottomNavigationBar(navController as NavHostController) }
     ) { innerPadding ->
@@ -38,3 +59,4 @@ fun HomeScreen(navController: NavController) {
         }
     }
 }
+*/
