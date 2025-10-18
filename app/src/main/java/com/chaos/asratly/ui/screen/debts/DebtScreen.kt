@@ -17,11 +17,14 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.chaos.asratly.ui.navigation.BottomNavigationBar
+import com.chaos.asratly.ui.component.TopBar
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DebtScreen(navController: NavController) {
     Scaffold(
+        topBar = { TopBar(title = "Debt", navController = navController, onBellClick = { /* Handle notification click */ }) },
         bottomBar = { BottomNavigationBar(navController as NavHostController) }
     ) { innerPadding ->
         Column(

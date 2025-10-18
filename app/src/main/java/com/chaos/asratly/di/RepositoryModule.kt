@@ -3,6 +3,7 @@ package com.chaos.asratly.di
 import com.chaos.asratly.data.local.IncomeDao
 import com.chaos.asratly.data.local.ExpenseDao
 import com.chaos.asratly.data.local.DebtDao
+import com.chaos.asratly.data.local.AsratDao
 import com.chaos.asratly.data.repository.FinanceRepository
 import dagger.Module
 import dagger.Provides
@@ -18,8 +19,9 @@ object RepositoryModule {
     fun provideFinanceRepository(
         incomeDao: IncomeDao,
         expenseDao: ExpenseDao,
-        debtDao: DebtDao
+        debtDao: DebtDao,
+        asratDao: AsratDao
     ): FinanceRepository {
-        return FinanceRepository(incomeDao, expenseDao, debtDao)
+        return FinanceRepository(incomeDao, expenseDao, debtDao,asratDao)
     }
 }

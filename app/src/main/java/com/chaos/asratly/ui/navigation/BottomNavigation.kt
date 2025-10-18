@@ -3,7 +3,7 @@ package com.chaos.asratly.ui.navigation;
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
-import androidx.compose.material.icons.filled.List
+import androidx.compose.material.icons.filled.MoneyOff
 import androidx.compose.material.icons.filled.AccountBalanceWallet
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.Icon
@@ -25,7 +25,7 @@ fun BottomNavigationBar(navController: NavHostController) {
 
     val items = listOf(
         BottomNavItem("Home", Screen.Home.route, Icons.Filled.Home),
-        BottomNavItem("Debts", Screen.Debts.route, Icons.Filled.List),
+        BottomNavItem("Debts", Screen.Debts.route, Icons.Filled.MoneyOff),
         BottomNavItem("Asrat", Screen.Asrat.route, Icons.Filled.AccountBalanceWallet),
         BottomNavItem("Settings", Screen.Settings.route, Icons.Filled.Settings)
     )

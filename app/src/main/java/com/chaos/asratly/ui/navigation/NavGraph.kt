@@ -1,24 +1,6 @@
 package com.chaos.asratly.ui.navigation;
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import com.chaos.asratly.ui.screen.home.HomeScreen
-
-@Composable
-fun AppNavGraph(navController: NavHostController) {
-    NavHost(
-        navController = navController,
-        startDestination = Screen.Home.route
-    ) {
-        composable(Screen.Home.route) {
-            HomeScreen(navController = navController)
-        }
-    }
-}
-/*
-import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -32,19 +14,6 @@ import com.chaos.asratly.ui.screen.asrat.AsratScreen
 import com.chaos.asratly.ui.screen.setting.SettingsScreen
 //import com.chaos.asratly.ui.splash.SplashViewModel
 
-@Composable
-fun AppNavGraph(navController: NavHostController) {
-    NavHost(
-        navController = navController,
-        startDestination = Screen.Home.route
-    ) {
-        composable(Screen.Home.route) {
-            HomeScreen(navController = navController)
-        }
-    }
-}
-
-/
 @Composable
 fun AppNavGraph(
     navController: NavHostController,
@@ -86,4 +55,3 @@ fun AppNavGraph(
         }
     }
 }
-*/

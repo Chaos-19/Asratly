@@ -17,7 +17,7 @@ android {
     
     defaultConfig {
         applicationId = "com.chaos.asratly"
-        minSdk = 21
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -104,6 +104,9 @@ dependencies {
     
     // --- Optional: Logging ---
     implementation("com.jakewharton.timber:timber:5.0.1")
+    
+    // Chart
+    implementation("co.yml:ycharts:2.1.0")
 }
 
 kapt { correctErrorTypes=true } 
